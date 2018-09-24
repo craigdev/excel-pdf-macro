@@ -1,0 +1,29 @@
+Sub PDFTabsBetweenStartAndEnd()
+
+' By Craig Swan'
+
+' This section is telling excel to publish to PDF everything between two tabs labeled "PDF - Start" and "PDF - End'
+
+  Dim X As Long
+  
+  If Sheets(Sheets("PDF - Start").Index + 1).Visible = True Then
+  Sheets(Sheets("PDF - Start").Index + 1).Select
+  End If
+  For X = Sheets("PDF - Start").Index + 1 To Sheets("PDF - End").Index - 1
+  If Sheets(X).Visible = True Then
+    Sheets(X).Select False
+  End If
+  Next
+
+' The following code publishes the document to the current network location of the excel file and saves as a template name 
+  Insert Name Here.'
+  
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, _
+    Filename:=ActiveWorkbook.Path & "\Insert Name Here.pdf", _
+    Quality:=xlQualityStandard, IncludeDocProperties:=True, _
+    IgnorePrintAreas:=False, OpenAfterPublish:=False
+
+        
+     Sheets("PDF - Start").Select
+
+End Sub
