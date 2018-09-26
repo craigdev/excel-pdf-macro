@@ -2,9 +2,9 @@ Sub PDFTabsBetweenStartAndEnd()
 
   Dim X As Long
   
-  For X = Sheets("PDF - Start").Index + 1 To Sheets("PDF - End").Index - 1
+  For X = Sheets("PDF - Start").Index + 0 To Sheets("PDF - End").Index - 0
   If Sheets(X).Visible = True Then
-    Sheets(X).Select
+    Sheets(X).Select False
   End If
   Next
   
@@ -17,3 +17,4 @@ Sub PDFTabsBetweenStartAndEnd()
      Sheets("PDF - Start").Select
 
 End Sub
+
