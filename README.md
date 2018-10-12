@@ -1,5 +1,5 @@
 # excel-pdf-macro
-VBA that publishes all visible sheets between two bookends and saves to the current location of the excel file.
+VBA that publishes to PDF all visible worksheets between two bookends labeled "PDF - Start" and "PDF - End" and saves to the current location of the excel file.
 
 Instructions:
 
