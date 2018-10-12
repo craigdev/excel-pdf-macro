@@ -1,6 +1,8 @@
 # excel-pdf-macro
 VBA that publishes all visible sheets between two bookends and saves to the current location of the excel file.
-Instructions
+
+Instructions:
+
     1. Add two worksheets labeled "PDF - Start" and "PDF - End" to the target excel file.
-    2. Copy code ...
-    3. ... (Finish Instructions)
+    2. Copy code from into new module
+    3. Run Macro
